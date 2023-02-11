@@ -1,0 +1,132 @@
+#build{
+    background-color:#012F34;
+    padding-bottom: 140px;
+    padding-top: 198px;
+    background-repeat: no-repeat;
+    background-image: url(../../img/build_bc.svg);
+    background-position: right bottom;
+
+}
+.build__title{
+    max-width: 445px;
+    font-family: 'Livvic';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: #FFFFFF;
+    position: relative;
+    
+    
+
+    &::before {
+        content: "";
+        width: 50px;
+        height: 4px;
+        background-color:  #F67E7E;
+        ;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -79px;
+    }
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+}
+.build__block{
+    max-width: 445px;
+}
+.build__suptitle{
+    font-family: 'Livvic';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+   color: #F67E7E;
+   margin-bottom: 16px;
+}
+.build_list__text{
+    font-family: 'Livvic';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+.build__item{
+    margin-bottom: 32px;
+    display: flex;
+   &::before{
+    content: "";
+    width: 72px;
+    height: 72px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin-right: 23px;
+   }
+    &:nth-child(1)::before{
+    background-image: url(../../img/build1.svg);
+    }
+    &:nth-child(2)::before{
+        background-image: url(../../img/build2.svg);
+        }
+        &:nth-child(3)::before{
+            background-image: url(../../img/build3.svg);
+            }
+}
+ 
+
+ @media screen and (max-width:1368px) {
+    #build{
+        background-position: right top;
+    }
+    .items{
+        flex-direction: column;
+        max-width: 573px;
+        margin: 0 auto;
+    }
+    .build__item{
+      &::before{
+        flex-shrink: 0;
+      }
+    }
+    .build__title{
+        font-family: 'Livvic';
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        color: #FFFFFF;
+        margin-bottom: 64px;
+         
+        &::before{
+            top: -32px;
+        }
+        .build__block{
+            max-width: 478px;
+        }        
+    }    
+ }
+@media screen and (max-width:559px) {
+    .build__title{
+        max-width: 240px;
+
+    }
+    .build__item{
+        flex-direction: column;
+        text-align: center;
+        &::before{
+            margin: 0 auto;
+            margin-bottom: 16px;
+        }
+    }
+    
+}
+
+
+
+
+
+
